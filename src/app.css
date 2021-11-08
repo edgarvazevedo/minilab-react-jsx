@@ -1,0 +1,13 @@
+.cachorro {
+    width: 100%;
+    height: auto;
+}
+
+.borda {
+    border: 1px;
+    border-radius: 4px;
+}
+
+.icone {
+    font-size: 100px;
+}
