@@ -2,7 +2,17 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import '../app.css'
 import dog from '../assets/images/puppy.jpg';
 import EmotionMeter from "./EmotionMeter";
+import Greeting from "./Greeting";
+import ToDoList from "./ToDoList";
 // Não se esqueça de importar os componentes!
+
+const tasks = [
+  "Fazer compras",
+  "Renovar CNH",
+  "Pagar contas",
+  "Estudar React",
+  "Fazer Minilab",
+];
 
 function App() {
 
@@ -10,7 +20,7 @@ function App() {
     <div className="container mt-5 mb-5 col-6">
       {/* Não se esqueça de invocar seus componentes aqui! */}
       <small>Interpolação de variáveis</small>
-        <h1>Olá, Pedro!</h1>
+        <Greeting name='Edgar' />
       <small>Imagens</small>
       <hr />
 
@@ -26,28 +36,8 @@ function App() {
       <small>Renderização de listas</small>
       <hr />
 
-      <ul class="list-group">
-  <li class="list-group-item">
-    <input class="form-check-input me-1" type="checkbox" value="" aria-label="..." />
-    Fazer compras
-  </li>
-  <li class="list-group-item">
-    <input class="form-check-input me-1" type="checkbox" value="" aria-label="..." />
-    Renovar CNH
-  </li>
-  <li class="list-group-item">
-    <input class="form-check-input me-1" type="checkbox" value="" aria-label="..." />
-    Pagar contas
-  </li>
-  <li class="list-group-item">
-    <input class="form-check-input me-1" type="checkbox" value="" aria-label="..." />
-    Estudar React
-  </li>
-  <li class="list-group-item">
-    <input class="form-check-input me-1" type="checkbox" value="" aria-label="..." />
-    Fazer Minilab
-  </li>
-</ul>
+      <ToDoList taskList={tasks}/>
+
 
       <small>Renderização condicional</small>
       <hr />
